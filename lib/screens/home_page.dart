@@ -45,7 +45,11 @@ class HomeScreen extends StatelessWidget {
               if (controller.isLoading.value) {
                 return const Center(child: CircularProgressIndicator());
               } else if (controller.employees.isEmpty) {
-                return const Center(child: Text('No Employees Found'));
+                return const Center(
+                    child: Text(
+                  'No Employees Found',
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ));
               } else {
                 return ListView.builder(
                   itemCount: controller.employees.length,
